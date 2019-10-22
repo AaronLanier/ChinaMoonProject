@@ -1,0 +1,68 @@
+body{
+    width:100%;
+    background-color: red;
+}
+
+.wrapper{
+    background-color:red;
+    width: 100%;
+
+}
+
+.header{ 
+    background-color:black ;
+    height: 70px;
+    color: white;
+
+}
+
+#navi{
+    background-color:black ;
+    height: 70px;
+
+}
+#link{
+    color: white;
+    padding-top:15px ;
+      font-size: 15px;
+}
+
+#moon{
+    color: white;
+    font-size: 23px;
+    margin-right: 100px ;
+   
+}
+#main{
+    background-color: green;
+}
+
+.footer{
+    background-color: blue;
+}
+.login{ 
+    background-color:brown ;
+    width: 100%;
+    margin:20px;
+}
+form{
+    
+  padding:20px;
+  color: white;
+}
+#lgn{
+    text-align: center;
+}
+
+#submit{
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+#logo1{
+    height: 50px;
+    margin-left: 20px;
+    margin-top: 8px;
+    padding-right:20px ;
+}
