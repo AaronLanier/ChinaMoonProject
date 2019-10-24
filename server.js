@@ -5,81 +5,62 @@ const path = require("path");
 
 const PORT = process.env.PORT || 3001;
 
-//const db = require("./models");
+const db = require("./models");
 
 const app = express();
 
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 
-// mongoose.connect(process.env.MONGODB_URI, {useNewUrlParser: true});
+mongoose.connect(process.env.MONGODB_URI, {useNewUrlParser: true});
 
-// const connection = mongoose.connection;
+const connection = mongoose.connection;
 
-// connection.on("connected", () => {
-//     console.log("Mongoose connected successfully");
-// });
-// connection.on("error", (err) => {
-//     console.log("Mongoose default connection error: " + err);
-// });
+connection.on("connected", () => {
+    console.log("Mongoose connected successfully");
+});
 
-// app.get("/api/cars/:id", function(req, res) {
-//     db.Tesla.findById(req.params.id)
-//     .then((singleTesla) => {
-//         res.json({
-//             message: "Requested all Teslas",
-//             error: false,
-//             data: singleTesla
-//         });
-//     }).catch((err) => {
-//         console.log(err);
-//         res.json({
-//             message: err.message,
-//             error: true
-//         })
-//     })
-// });
+connection.on("error", (err) => {
+    console.log("Mongoose default connection error: " + err);
+});
 
-// app.get("/api/cars", function(req, res) {
-//     db.Tesla.find({})
-//     .then((allTeslas) => {
-//         console.log(allTeslas);
-//         res.json({
-//             message: "Requested all Teslas",
-//             error: false,
-//             data: allTeslas
-//         });
-//     }).catch((err) => {
-//         console.log(err);
-//         res.json({
-//             message: err.message,
-//             error: true
-//         })
-//     })
-// });
-
-// app.post("/api/new", function(req, res) {
-//     db.Tesla.create(req.body)
-//     .then((newTesla) => {
-//         console.log("New tesla: ", newTesla);
-//         res.json({
-//             message: "Successfully created",
-//             error: false,
-//             data: newTesla
-//         })
-//     }).catch((err) => {
-//         console.log(err);
-//         res.json({
-//             message: err.message,
-//             error: true
-//         })
-//     })
-// });
+app.get("/menus", function(req, res) {
+    db.ChinaMenu.find({})
+    .then((allMenu) => {
+        res.json({
+            message: "Requested all menus",
+            error: false,
+            data: allMenu
+        });
+    }).catch((err) => {
+        console.log(err);
+        res.json({
+            message: err.message,
+            error: true
+        })
+    })
+});
+app.post("/new",function(req,res){
+    db.ChinaMenu.create(req.body)
+    .then((newChinaMenu) => {
+console.log("New Menu Added to the system: ",newChinaMenu);
+res.json({
+    message: "New item in the menu created",
+    error:false,
+    data:newChinaMenu
+})
+    }).catch((err)=>{
+        console.log(err);
+        res.json({
+            message: err.message
+        })
+    })
+})
 
 app.use(express.static(__dirname + '/client/build'));
 
 app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "/client/build/index.html"));
+    res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
 
 app.listen(PORT, function() {
