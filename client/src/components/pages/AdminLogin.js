@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Header from "../Header";
 import Wrapper from "../Wrapper";
-import Footer from "../Footer";
+
 
 class AdminLogin extends Component {
 
@@ -14,7 +14,7 @@ class AdminLogin extends Component {
             <Wrapper />
 
 
-            <Footer />
+       
        </div>
         );
     }

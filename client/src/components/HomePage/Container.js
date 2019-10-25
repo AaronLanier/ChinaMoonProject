@@ -1,7 +1,7 @@
 import React from "react";
-import Header from "./Header";
-import Wrapper from "./Wrapper";
-import Footer from "./Footer";
+import Header from "../Header";
+import Wrapper from "../Wrapper";
+
 
 import "./styles.css";
 
@@ -16,7 +16,7 @@ function Container(props) {
              <Wrapper />
 
 
-             <Footer />
+           
         </div>
 
 
