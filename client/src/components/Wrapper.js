@@ -10,7 +10,8 @@ function Wrapper(props) {
         <div className="row" id="main">
             <div class="col" id="lavender;"> &nbsp;</div>
             <div class="col" id="orange;">
-            <Login />
+            Hello World
+                <Login />
             
             </div>
             <div class="col" id="lavender;">&nbsp;</div>
