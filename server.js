@@ -23,11 +23,10 @@ connection.on("error", (err) => {
     console.log("Mongoose default connection error: " + err);
 });
 
-
 app.post("/api/new", function (req, res) {
     db.AdminUser.create(req.body)
         .then((newAdminUser) => {
-            console.log("New Admin User: ", newAdminUser);
+            console.log("New User: ", newAdminUser);
             res.json({
                 message: "Successfully created",
                 error: false,
@@ -41,6 +40,7 @@ app.post("/api/new", function (req, res) {
             })
         })
 });
+
 
 
 
