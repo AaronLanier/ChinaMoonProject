@@ -12,7 +12,7 @@ var AdminUserSchema = new Schema({
     required: true
   },
  
-  user_id: {
+  userid: {
     type: String,
     required: true
   },

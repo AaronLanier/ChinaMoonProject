@@ -43,15 +43,14 @@ app.post("/api/new", function (req, res) {
 
 
 
-
-app.get("/api/admin/:user_id", function (req, res) {
-    db.AdminUser.findById(req.params.user_id)
-        .populate("accident")
-        .then((singleTesla) => {
+app.get("/api/admin/:userid", function (req, res) {
+    console.log(req.params.userid);
+    db.AdminUser.findById(req.params.userid)       
+        .then((adminUser) => {
             res.json({
-                message: "Requested single Teslas",
+                message: "Logged in user",
                 error: false,
-                data: singleTesla
+                data: adminUser
             });
         }).catch((err) => {
             console.log(err);
@@ -61,6 +60,7 @@ app.get("/api/admin/:user_id", function (req, res) {
             })
         })
 });
+
 
 
 
