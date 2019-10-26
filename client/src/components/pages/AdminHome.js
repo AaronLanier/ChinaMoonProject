@@ -8,6 +8,10 @@ class AdminHome extends Component {
     showNewItemForm: false
     
   };
+constructor(props){
+super(props)
+
+}
 
   componentDidMount() {
     this.getMenus();
@@ -34,7 +38,7 @@ class AdminHome extends Component {
         .then(response => {
           console.log(response);
           alert("Your menu was successfully deleted.");
-        this.props.history.push("/AdminHome");
+        window.location.reload();
         })
         .catch(err => {
           console.log(err);
@@ -102,15 +106,10 @@ class AdminHome extends Component {
             </form>
           </div>
         ) : (
-          <button
-            type="button"
-            className="btn btn-success"
-            onClick={() => {
-              this.setState({ showAccidentForm: true });
-            }}
-          >
-            New Item
-          </button>
+            <Link to={"/NewMenuPage"}>
+              <button type="button" className="btn btn-success">New Item</button>
+            </Link>
+         
         )}
       </div>
     );
