@@ -56,6 +56,75 @@ res.json({
         })
     })
 })
+app.delete("menu/delete/:id", function(req, res) {
+    db.ChinaMenu.deleteOne({_id: req.params.id})
+    .then((response) => {
+        // console.log(response);
+        res.json({
+            message: `Deleted tesla with id: ${req.params.id}`,
+            error: false,
+            data: response
+        });
+    }).catch((err) => {
+        console.log(err);
+        res.json({
+            message: err.message,
+            error: true
+        })
+    })
+})
+
+app.get("/menus/:id", function(req, res) {
+    db.ChinaMenu.findById(req.params.id)
+    .then((singleMenu) => {
+        res.json({
+            message: "Requested single Menu",
+            error: false,
+            data: singleMenu
+        });
+    }).catch((err) => {
+        console.log(err);
+        res.json({
+            message: err.message,
+            error: true
+        })
+    })
+});
+
+app.put("/menu/:id", function(req, res) {
+    db.ChinaMenu.findByIdAndUpdate(req.body._id, req.body)
+    .then(singleMenu => {
+        res.json({
+            message: `Updated Menu with id: ${singleMenu._id}`,
+            error: false,
+            data: singleMenu
+        });
+    }).catch(err => {
+        console.log(err);
+        res.json({
+            message: err.message,
+            error: true
+        })
+    });
+});
+
+app.delete("/menus/:id", function(req, res) {
+    db.ChinaMenu.deleteOne({_id: req.params.id})
+    .then((response) => {
+        // console.log(response);
+        res.json({
+            message: `Deleted tesla with id: ${req.params.id}`,
+            error: false,
+            data: response
+        });
+    }).catch((err) => {
+        console.log(err);
+        res.json({
+            message: err.message,
+            error: true
+        })
+    })
+})
 
 app.use(express.static(__dirname + '/client/build'));
 
