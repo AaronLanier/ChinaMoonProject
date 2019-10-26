@@ -23,6 +23,27 @@ connection.on("error", (err) => {
     console.log("Mongoose default connection error: " + err);
 });
 
+
+app.post("/api/new", function (req, res) {
+    db.AdminUser.create(req.body)
+        .then((newAdminUser) => {
+            console.log("New Admin User: ", newAdminUser);
+            res.json({
+                message: "Successfully created",
+                error: false,
+                data: newAdminUser
+            })
+        }).catch((err) => {
+            console.log(err);
+            res.json({
+                message: err.message,
+                error: true
+            })
+        })
+});
+
+
+
 app.get("/api/admin/:user_id", function (req, res) {
     db.AdminUser.findById(req.params.user_id)
         .populate("accident")
