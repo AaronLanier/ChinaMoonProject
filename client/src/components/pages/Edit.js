@@ -11,18 +11,18 @@ class Edit extends Component {
 
   componentDidMount() {
     console.log(this.props.match.params.id);
-    this.getCarById();
+    this.getMenuById();
   }
 
-  getCarById = () => {
+  getMenuById = () => {
     axios
       .get("/menus/" + this.props.match.params.id)
       .then(menu => {
         console.log(menu);
         this.setState({
-          catagoryName: menu.data.data.model,
-          itemName: menu.data.data.color,
-          price: menu.data.data.year,
+          catagoryName: menu.data.data.catagoryName,
+          itemName: menu.data.data.itemName,
+          price: menu.data.data.price,
           _id: menu.data.data._id
         
         });
@@ -50,7 +50,7 @@ class Edit extends Component {
         if (response.data.error) {
           alert("Failed to create" + response.data.message);
         } else {
-          this.props.history.push("/collection/" + response.data.data._id);
+          this.props.history.push("/AdminHome");
         }
       })
       .catch(err => {
@@ -71,8 +71,8 @@ class Edit extends Component {
                 <input
                   className="form-control"
                   type="text"
-                  name="model"
-                  placeholder="Item Catagory"
+                  name="catagoryName"
+                  placeholder="catagoryName"
                   value={this.state.catagoryName}
                   onChange={this.handleInputChange}
                 />
@@ -82,9 +82,9 @@ class Edit extends Component {
                 <input
                   className="form-control"
                   type="text"
-                  name="color"
-                  placeholder="Item Name"
-                  value={this.state.color}
+                  name="itemName"
+                  placeholder="itemName"
+                  value= {this.state.itemName}
                   onChange={this.handleInputChange}
                 />
               </div>
@@ -95,7 +95,7 @@ class Edit extends Component {
                   type="number"
                   name="price"
                   placeholder="Price"
-                  value={this.state.year}
+                  value={this.state.price}
                   onChange={this.handleInputChange}
                 />
               </div>

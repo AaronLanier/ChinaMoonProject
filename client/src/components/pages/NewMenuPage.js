@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 
 class NewCar extends Component {
@@ -25,11 +26,11 @@ class NewCar extends Component {
       .post("/new", this.state)
       .then(response => {
         console.log(response);
-        // if(response.data.error){
-        //   alert("Failed to create" + response.data.message);
-        // }else{
-        //   this.props.history.push('/collection/' + response.data.data._id);
-        // } 
+        if(response.data.error){
+          alert("Failed to create" + response.data.message);
+        }else{
+          this.props.history.push('/AdminHome');
+        } 
       })
       .catch(err => {
         console.log(err);
@@ -70,6 +71,7 @@ class NewCar extends Component {
             />
           </div>
           <div className="form-group">
+          
             <button
               type="submit"
               className="btn btn-primary"

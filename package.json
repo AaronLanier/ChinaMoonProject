@@ -44,7 +44,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "dev": "concurrently \"nodemon server.js\" \"cd client && npm run start\"",
-    "build": "cd client && npm run build"
+    "build": "cd client && npm run build",
+    "seed": "node scripts/seedsDB.js"
   },
   "repository": {
     "type": "git",
