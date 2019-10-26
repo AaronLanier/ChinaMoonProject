@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from "axios";
 
 class Login extends Component {
     state={
@@ -41,7 +42,8 @@ class Login extends Component {
                 if (response.data.error) {
                     alert("Action Failed " + response.data.message);
                 } else {
-                    //re-direct to admin login
+                    //if user id and password exit 
+                    //re-direct to admin page
                    // this.props.history.push('/collection/' + response.data.data._id);
                 }
             })
