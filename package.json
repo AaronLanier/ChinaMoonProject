@@ -29,6 +29,7 @@
     "ms": "^2.0.0",
     "nan": "^2.14.0",
     "nice-try": "^1.0.5",
+    "nodemon": "^1.19.4",
     "number-is-nan": "^1.0.1",
     "p-defer": "^1.0.0",
     "p-finally": "^1.0.0",
@@ -44,7 +45,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "build": "cd client && npm run build"
+    "build": "cd client && npm run build",
+    "dev": "concurrently \"nodemon server.js\" \"cd client && npm run start\""
   },
   "repository": {
     "type": "git",
