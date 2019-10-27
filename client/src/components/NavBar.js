@@ -1,5 +1,6 @@
 import React from "react";
-//import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+//import { BrowserRouter, Route, Link } from "react-router-dom";
 import "./styles.css";
 
 
@@ -12,15 +13,19 @@ function NavBar(props) {
                 <img src="../../china_moon_logo.jpg" id="logo1" />
                 <ul className="navbar-nav" >
                     <li className="nav-item">
-                        <a className="nav-link" id="moon" href="#">China Moon</a>
+                        
+                        <Link to="/" className="nav-link" id="moon"> China Moon </Link>
+
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" id="link" href="#">Admin Registration</a>
                         
+                        <Link to ="/Registration" className="nav-link" id="link"> Admin Registration </Link>
                     
                     </li>
                     <li clasName="nav-item">
-                        <a className="nav-link" id="link" href="#">Login</a>
+                       
+                        
+<Link to ="/Login" className="nav-link" id="link"> Login </Link>
                        
                     </li>
                 </ul>

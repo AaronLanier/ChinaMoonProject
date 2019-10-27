@@ -12,9 +12,9 @@
     "find-up": "^3.0.0",
     "fsevents": "^1.2.9",
     "get-caller-file": "^1.0.3",
+    "has-flag": "^3.0.0",
     "hosted-git-info": "^2.8.5",
     "invert-kv": "^2.0.0",
-    "has-flag": "^3.0.0",
     "is-arrayish": "^0.2.1",
     "is-fullwidth-code-point": "^2.0.0",
     "is-stream": "^1.1.0",
@@ -37,15 +37,14 @@
     "p-locate": "^3.0.0",
     "p-try": "^2.2.0",
     "parse-json": "^4.0.0",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "react-router-dom": "^5.1.2"
   },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "build": "cd client && npm run build"
-    
-
   },
   "repository": {
     "type": "git",

@@ -45,9 +45,7 @@ app.post("/api/new", function(req, res) {
 
 
 app.get("/api/admin/:userid", function(req, res) {
-  console.log("User ID: ", req.params.userid);
- //db.AdminUser.findById(req.params.userid)
-    let UserID = req.params.userid;
+       let UserID = req.params.userid;
     db.AdminUser.find({ userid:UserID})
     .then(User => {
       console.log(User);
