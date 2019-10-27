@@ -6,12 +6,21 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
   return (
-    <Router>
-    <div className="App">
-      <Container />
-    </div>
-    </Router>
+  <Router>
+    
+    <Switch>
+      <Route path="/admin" component={Container} />
+      <Route path="/Login" component={Login} />
+      <Route path="/Registration" component={Registration} />
+       
+      
+      
+    </Switch>
+  </Router>
+
+
   );
+
 }
 
 export default App;

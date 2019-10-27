@@ -7,6 +7,7 @@ import "./styles.css";
 function Wrapper(props) {
   return (
     <Router>
+    <Switch>
     <div className="row" id="main">
       <div className="col" id="lavender;">
         {" "}
@@ -14,17 +15,18 @@ function Wrapper(props) {
       </div>
       <div className="col" id="orange;">
         
-          <Route exact path="/Login" Component={Login}>
-        </Route>
+          <Route exact path="/Login" Component={Login}/>
+       
 
-          <Route exact path="/Registration" Component={Registration}>
+          <Route exact path="/Registration" Component={Registration}/>
 
-</Route>
+
       </div>
       <div className="col" id="lavender;">
         &nbsp;
       </div>
     </div>
+      </Switch>
     </Router>
   );
 }
