@@ -4,7 +4,7 @@ import React from "react";
 import Registration from "./Registration";
 import "./styles.css";
 
-function Wrapper(props) {
+function HomeWrapper(props) {
     return (
 
         <div className="row" id="main">
@@ -14,8 +14,18 @@ function Wrapper(props) {
       </div>
             <div className="col" id="orange;">
 
-                <Registration />
-
+              <h2>Welcome Home</h2>
+              <br />
+                <br /> 
+                <br />
+                 <br />
+                  <br /> 
+                  <br /> 
+                  <br />
+                   <br />
+                <br />
+                <br />
+                <br />
 
 
 
@@ -28,4 +38,4 @@ function Wrapper(props) {
     );
 }
 
-export default Wrapper;
+export default HomeWrapper;

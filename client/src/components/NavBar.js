@@ -10,7 +10,7 @@ function NavBar(props) {
     return (
         <div className="header" id="header">
             <nav className="navbar navbar-expand-sm " id="navi">
-                <img src="../../china_moon_logo.jpg" id="logo1" alt={props.moon} />
+                <img src="../../china_moon_logo.jpg" id="logo1" alt={''} />
                 <ul className="navbar-nav" >
                     <li className="nav-item">
                         
@@ -22,7 +22,7 @@ function NavBar(props) {
                         <Link to ="/Registration" className="nav-link" id="link"> Admin Registration </Link>
                     
                     </li>
-                    <li clasName="nav-item">
+                    <li className="nav-item">
                        
                         
 <Link to ="/admin" className="nav-link" id="link"> Login </Link>
