@@ -1,25 +1,31 @@
 import React from "react";
-
-//import Registration from "./Registration";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Login from "./Login";
+import Registration from "./Registration";
 import "./styles.css";
 
-
-function AdminWrapper(props) {
-
+function Wrapper(props) {
     return (
+
         <div className="row" id="main">
-            <div className="col" id="lavender;"> &nbsp;</div>
+            <div className="col" id="lavender;">
+                {" "}
+                &nbsp;
+      </div>
             <div className="col" id="orange;">
-               This the Admin page
+
+                <Registration />
+
+
+
 
             </div>
-            <div className="col" id="lavender;">&nbsp;</div>
+            <div className="col" id="lavender;">
+                &nbsp;
+      </div>
         </div>
 
-
-    )
+    );
 }
 
-
-export default AdminWrapper;
-
+export default Wrapper;
