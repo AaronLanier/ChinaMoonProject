@@ -1,7 +1,7 @@
 import React from "react";
 //import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 //import Login from "./Login";
-import Registration from "./Registration";
+//import Registration from "./Registration";
 import "./styles.css";
 
 function HomeWrapper(props) {

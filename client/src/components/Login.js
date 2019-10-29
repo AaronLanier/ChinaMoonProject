@@ -2,10 +2,22 @@ import React, { Component } from "react";
 //import axios from "axios";
 
 class Login extends Component {
-  state = {
-    userid: "",
-    password: ""
-  };
+//   state = {
+//     userid: "",
+//     password: ""
+//   };
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            name: "",
+            userid: ""
+            
+        };
+console.log(props);
+    }
+
+
 
   handleChange = event => {
     let value = event.target.value;
