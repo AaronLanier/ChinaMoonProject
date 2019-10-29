@@ -24,6 +24,7 @@ connection.on("error", (err) => {
     console.log("Mongoose default connection error: " + err);
 });
 
+//all the menus in the db
 app.get("/menus", function(req, res) {
     db.ChinaMenu.find({})
     .then((allMenu) => {
@@ -40,7 +41,28 @@ app.get("/menus", function(req, res) {
         })
     })
 });
+
+app.get("/menus/:menuType", function(req, res) {
+    db.ChinaMenu.find({menuType:req.params.menuType})
+    .then((allMenu) => {
+        console.log("Found this from db",allMenu)
+        res.json({
+            message: "Requested all menus",
+            error: false,
+            data: allMenu
+        });
+    }).catch((err) => {
+        console.log(err);
+        res.json({
+            message: err.message,
+            error: true
+        })
+    })
+});
+
+//To create a new item
 app.post("/new",function(req,res){
+    console.log("New Item ",req.body)
     db.ChinaMenu.create(req.body)
     .then((newChinaMenu) => {
 console.log("New Menu Added to the system: ",newChinaMenu);
@@ -56,6 +78,8 @@ res.json({
         })
     })
 })
+
+//Delete an item
 app.delete("menu/delete/:id", function(req, res) {
     db.ChinaMenu.deleteOne({_id: req.params.id})
     .then((response) => {
@@ -74,6 +98,7 @@ app.delete("menu/delete/:id", function(req, res) {
     })
 })
 
+//item based on id
 app.get("/menus/:id", function(req, res) {
     db.ChinaMenu.findById(req.params.id)
     .then((singleMenu) => {
@@ -91,6 +116,7 @@ app.get("/menus/:id", function(req, res) {
     })
 });
 
+//
 app.put("/menu/:id", function(req, res) {
     db.ChinaMenu.findByIdAndUpdate(req.body._id, req.body)
     .then(singleMenu => {

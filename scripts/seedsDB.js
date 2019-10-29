@@ -6,17 +6,7 @@ const db = require("../models");
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/chinamoon");
 
 const chinamoonSeed = [
-  { catagoryName: "dinner", itemName: "kabab", price: 2.99 },
-  {
-    catagoryName: "dinner",
-    itemName: "water",
-    price: 2.99
-  },
-  {
-    catagoryName: "lunch",
-    itemName: "Chicken Fried Rice",
-    price: 10.99
-  }
+  { menuType: "allDayMenu", categoryName: "dinner", itemName: "kabab", price: 2.99 }
 ];
 
 db.ChinaMenu.remove({})
