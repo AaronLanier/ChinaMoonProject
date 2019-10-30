@@ -1,4 +1,7 @@
-.header {
-  color: green;
+#header {
+  background-color: black;
   text-align: center;
+}
+#logo1 {
+  height: 150px;
 }
