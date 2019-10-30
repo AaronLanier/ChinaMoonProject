@@ -8,10 +8,7 @@ class AdminHome extends Component {
     showNewItemForm: false
     
   };
-constructor(props){
-super(props)
 
-}
 
   componentDidMount() {
     this.getMenus();
@@ -48,12 +45,13 @@ super(props)
 
   render() {
     return (
-      <div>
+      <div className="container">
         <h1>This is ADMIN homepage!</h1>
        
         <table class="table">
           <thead>
             <tr>
+              <th scope="col">Menu Type</th>
               <th scope="col">Catagory Name</th>
               <th scope="col">Item Name</th>
               <th scope="col">Price</th>
@@ -63,7 +61,8 @@ super(props)
           <tbody>
             {this.state.menus.map(menu => (
               <tr>
-                <td>{menu.catagoryName}</td>
+                <td>{menu.menuType}</td>
+                <td>{menu.categoryName}</td>
                 <td>{menu.itemName}</td>
                 <td>{menu.price}</td>
                 <td>   <Link to={"/edit/" +menu._id}>
