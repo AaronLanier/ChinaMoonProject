@@ -10,7 +10,7 @@ class AdminLogin extends Component {
             <div className="wrapper" id="wrapper">
 
 
-                <Header />
+
                 <Wrapper />
 
 
