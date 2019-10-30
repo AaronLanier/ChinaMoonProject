@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
+  "engines": {
+    "node": "12.13.0"
+  },
   "dependencies": {
     "chalk": "^2.4.2",
     "concurrently": "^5.0.0",
