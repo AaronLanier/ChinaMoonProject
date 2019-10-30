@@ -524,6 +524,7 @@ const chinamoonSeed = [
     price: 7.95
   },
   
+  { menuType: "All Day Menu", categoryName: "Chicken", itemName: "kabab", price: 2.99 }
 ];
 
 db.ChinaMenu.remove({})
