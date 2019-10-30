@@ -8,14 +8,14 @@ class AdminLogin extends Component {
     render() {
         return (
             <div className="wrapper" id="wrapper">
-       
-           
-            <Header />
-            <Wrapper />
 
 
-       
-       </div>
+                <Header />
+                <Wrapper />
+
+
+
+            </div>
         );
     }
 }
