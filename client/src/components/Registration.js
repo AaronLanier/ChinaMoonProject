@@ -1,68 +1,57 @@
 import React, { Component } from "react";
 import axios from "axios";
-import { Redirect } from 'react-router-dom';
+//import { Redirect } from 'react-router-dom';
 
 class Registration extends Component {
-//   state = {
-//     name: "",
-//       userid: "",
-//       password: "",
-//       confirmPswd:""
-//   };
-
-    constructor(props) {
-        super(props);
-        this.state = {
-            name: "",
-            userid: "",
-            password: "",
-            confirmPswd: ""
-        };
-       
-    }
-
-
-    handleChange = event => {
-        let value = event.target.value;
-        let name = event.target.name;
-
-        this.setState({
-            [name]: value
-        });
-        //console.log(this.state);
+  
+  constructor(props) {
+    super(props);
+    this.state = {
+      name: "",
+      userid: "",
+      password: "",
+      confirmPswd: ""
     };
+  }
 
-    handleFormSubmit = event => {
-        event.preventDefault();
-        console.log(this.state);
-        axios
-            .post("/api/new", this.state)
-            .then(response => {
-                console.log(response);
-                if (response.data.error) {
-                    alert("Failed to create" + response.data.message);
-                } else {
-                    //this.props.history.push("/Login"); 
-                    //browserHistory.push('/Login');
-                    //this.history.pushState(null, 'Login');                   
-                    //this.props.history.push('/collection/' + response.data.data._id);
-                    return <Redirect to="/Login" />
-                    
-                }
-            })
-            .catch(err => {
-                console.log(err);
-                alert("Failed to create: " + err.message);
-            });
-    };
+  handleChange = event => {
+    let value = event.target.value;
+    let name = event.target.name;
 
+    this.setState({
+      [name]: value
+    });
+    //console.log(this.state);
+  };
 
+  handleFormSubmit = event => {
+    event.preventDefault();
+    console.log(this.state);
+    axios
+      .post("/api/new", this.state)
+      .then(response => {
+        console.log("On the registration page");
+        console.log(response);
+        if (response.data.error) {
+          alert("Failed to create" + response.data.message);
+        } else {
+          this.props.history.push("/Login");
+          //browserHistory.push('/Login');
+          //this.history.pushState(null, 'Login');
+          //this.props.history.push('/collection/' + response.data.data._id);
+          // return <Redirect to="/Login" />
+        }
+      })
+      .catch(err => {
+        console.log(err);
+        alert("Failed to create: " + err.message);
+      });
+  };
 
-    
   render() {
     return (
-      <div className="login">
-        <h4 id="lgn">Admin Registration</h4>
+      <div className="reg-form">
+        <h4 id="lgn">Admin Registration Banana</h4>
         <form >
           <div className="form-group">
             <label hmtlfor="name">Name:</label>

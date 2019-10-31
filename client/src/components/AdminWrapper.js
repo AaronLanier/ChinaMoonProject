@@ -1,10 +1,10 @@
 import React from "react";
 //import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-//import Login from "./Login";
+import Login from "./Login";
 import Registration from "./Registration";
 import "./styles.css";
 
-function Wrapper(props) {
+function AdminWrapper(props) {
     return (
 
         <div className="row" id="main">
@@ -28,4 +28,4 @@ function Wrapper(props) {
     );
 }
 
-export default Wrapper;
+export default AdminWrapper;

@@ -45,6 +45,12 @@ body{
     width: 100%;
     margin:20px;
 }
+
+.reg-form{ 
+    background-color:brown ;
+    width: 40%;
+    margin: 0 auto;
+}
 form{
     
   padding:20px;
