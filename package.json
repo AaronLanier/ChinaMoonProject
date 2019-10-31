@@ -56,6 +56,7 @@
     "isobject": "^3.0.1",
     "js-tokens": "^4.0.0",
     "json-parse-better-errors": "^1.0.2",
+    "jsonwebtoken": "^8.5.1",
     "kareem": "^2.3.1",
     "kind-of": "^6.0.2",
     "lcid": "^2.0.0",

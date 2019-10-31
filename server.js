@@ -3,6 +3,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const path = require("path");
 const passport=require('passport');
+const jwt=require('jsonwebtoken');
 
 const app = express();
 const bcrypt = require('bcrypt');
@@ -10,6 +11,7 @@ const bcrypt = require('bcrypt');
 //call the function with paramter
 //initializePassport(passport);
 const saltRounds = 10;
+//const secretkey="testingTopScrect";
 
 
 
@@ -62,11 +64,6 @@ app.post('/api/new', function (req, res) {
   });
 });
 
-
-
-
-
-
 app.post("/api/new", function(req, res) {  
   db.AdminUser.create(req.body)  
     .then(newAdminUser => {
@@ -87,13 +84,54 @@ app.post("/api/new", function(req, res) {
       //res.redirect('/Registration');
     });
 });
+//create function to get token
+function verifyToken(req, res, next){
+  //get the header value
+  const bearerHeader=req.headers['authorization'];
+  //check if bearer bearer is defined
+  if(typeof bearerHeader!=='undefined') {
+    const bearer=bearerHeader.split(' ');
+    //get token
+    const bearerToken=bearer[1];
+  //  // Store data in local storage
+  //   this.localStorage.setItem('moonDataKey', bearerToken);
 
-app.get('/Login', (req,res)=>{
-  res.render()
+  //   // Get data
+  //   req.token = this.localStorage.getItem('moonDataKey');
+
+    req.token=bearerToken;
+    next();
+
+  }else{
+    res.sendStatus(403); 
+      
+  }
+}
+
+//create a protected route
+app.post('/api/posts', verifyToken,  (req, res)=> {
+  jwt.verify(req.token, 'secretkey', (err, authData)=>{
+    if(err){
+      //res.sendStatus(403)
+      res.json({
+        message: "access denied"
+      })
+    }else{
+      res.json({
+        message: "Welcome to protected page",
+        authData
+      })
+
+    }
+
+  })
+
+
 })
 
 app.get("/api/admin/:userid", function(req, res) {
        let UserID = req.params.userid;
+       //also get pwd and hash it with bcyrpt and compare with dbpwd
     db.AdminUser.find({ userid:UserID})
     .then(dBUser => {
       console.log(dBUser);
@@ -111,6 +149,31 @@ app.get("/api/admin/:userid", function(req, res) {
       });
     });
 });
+
+app.get('/api', (req,res)=>{
+  res.json({
+    message: "welcome to test api"
+  });
+  
+})
+
+
+app.post("/api/login", function (req, res) {
+ //mock user
+ const user={
+   name : "Osy Osy",
+   userid:"osy@gmail.com",
+   password: "password"
+ }
+ jwt.sign({user:user}, 'secretkey',{expiresIn:'90s'}, (err, token)=>{
+   res.json({
+     token:token
+   })
+
+   
+ })
+});
+
 
 app.use(express.static(__dirname + "/client/build"));
 

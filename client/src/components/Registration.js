@@ -36,10 +36,7 @@ class Registration extends Component {
           alert("Failed to create" + response.data.message);
         } else {
           this.props.history.push("/Login");
-          //browserHistory.push('/Login');
-          //this.history.pushState(null, 'Login');
-          //this.props.history.push('/collection/' + response.data.data._id);
-          // return <Redirect to="/Login" />
+          
         }
       })
       .catch(err => {

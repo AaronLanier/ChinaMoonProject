@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "./Header";
+//import Header from "./Header";
 import HomeWrapper from "./HomeWrapper";
 import Footer from "./Footer";
 
@@ -11,7 +11,7 @@ function Home (props) {
     return (
         <div className="wrapper" id="wrapper">
 
-            <Header />
+           
             <HomeWrapper />
 
 

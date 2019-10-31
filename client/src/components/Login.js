@@ -1,18 +1,15 @@
 import React, { Component } from "react";
-//import axios from "axios";
+import axios from "axios";
 
 class Login extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            name: "",
-            userid: ""
-            
-        };
-console.log(props);
-    }
-
-
+  constructor(props) {
+    super(props);
+    this.state = {
+      userid: "",
+      password: ""
+    };
+    //console.log(props);
+  }
 
   handleChange = event => {
     let value = event.target.value;
@@ -24,11 +21,33 @@ console.log(props);
     //console.log(this.state);
   };
 
+  // componentDidMount() {
+  //   this.getUserByUserID();
+  // }
+
+  // getUserByUserID = () => {
+  //   axios
+  //     .get("/api/login/" + this.props.match.params.id)
+  //     .then(user => {
+  //       console.log(user);
+  //       // this.setState({
+  //       //   userid: car.data.data.model,
+  //       //   color: car.data.data.color,
+  //       //   year: car.data.data.year,
+  //       //   imageURL: car.data.data.imageURL,
+  //       //   _id: car.data.data._id,
+  //       //   accident: car.data.data.accident
+  //       // });
+  //     })
+  //     .catch(err => {
+  //       console.log(err);
+  //     });
+  // };
   handleFormSubmit = event => {
     event.preventDefault();
-    console.log(this.state);
+    //console.log(this.state);
     // axios
-    //   .post("/api/admin/user_id", this.state)
+    //   .post("/api/login", this.state)
     //   .then(response => {
     //     console.log(response);
     //     if (response.data.error) {

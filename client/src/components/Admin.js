@@ -11,7 +11,7 @@ function Admin (props) {
     return (
         <div className="wrapper" id="wrapper">
 
-           <Header />
+           
             <AdminWrapper />
 
 
