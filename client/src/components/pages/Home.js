@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import Hours from '../Hours/Hours'
+import Hours from '../Hours/Hours';
+import Map from '../Map/Map'
 
 class Home extends Component {
     state = {
@@ -55,6 +56,7 @@ class Home extends Component {
                         </>
                     ))}
                 </div>
+              <Map />
             </div>
         );
     }
