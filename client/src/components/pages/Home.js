@@ -39,7 +39,6 @@ class Home extends Component {
     render() {
         return (
             <div>
-                <Hours />
                 <div>
                     <select name="menuType" value={this.state.menuType} onChange={this.handleMenuTypeChange}>
                         <option value="all">---</option>
@@ -56,7 +55,7 @@ class Home extends Component {
                         </>
                     ))}
                 </div>
-              <Map />
+                <Map />
             </div>
         );
     }
