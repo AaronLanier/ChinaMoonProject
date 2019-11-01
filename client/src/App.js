@@ -6,7 +6,7 @@ import Container from "./components/Container";
 import Registration from "./components/Registration";
 import Header from "./components/Header";
 import Home from "./components/Home";
-//import Wrapper from "./components/Wrapper";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -24,6 +24,8 @@ function App() {
           </div>
         </>
       </Switch>
+      <br />
+      <Footer />
     </Router>
   );
 }
