@@ -45,7 +45,7 @@ class AdminHome extends Component {
 
   render() {
     return (
-      <div>
+      <div className="container">
         <h1>This is ADMIN homepage!</h1>
        
         <table class="table">
