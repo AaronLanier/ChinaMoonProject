@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import Hours from '../Hours/Hours'
+import Hours from '../Hours/Hours';
+import Map from '../Map/Map'
 
 class Home extends Component {
     state = {
@@ -38,7 +39,6 @@ class Home extends Component {
     render() {
         return (
             <div>
-                <Hours />
                 <div>
                     <select name="menuType" value={this.state.menuType} onChange={this.handleMenuTypeChange}>
                         <option value="all">---</option>
@@ -55,6 +55,7 @@ class Home extends Component {
                         </>
                     ))}
                 </div>
+                <Map />
             </div>
         );
     }
