@@ -1,12 +1,13 @@
 import React, { Component } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import "../AdminHome.css";
 
 class AdminHome extends Component {
   state = {
     menus: [],
     showNewItemForm: false
-    
+
   };
 
 
@@ -35,7 +36,7 @@ class AdminHome extends Component {
         .then(response => {
           console.log(response);
           alert("Your menu was successfully deleted.");
-        window.location.reload();
+          window.location.reload();
         })
         .catch(err => {
           console.log(err);
@@ -45,9 +46,7 @@ class AdminHome extends Component {
 
   render() {
     return (
-      <div className="container">
-        <h1>This is ADMIN homepage!</h1>
-       
+      <div className="container" id="adminTable">
         <table class="table">
           <thead>
             <tr>
@@ -65,9 +64,9 @@ class AdminHome extends Component {
                 <td>{menu.categoryName}</td>
                 <td>{menu.itemName}</td>
                 <td>{menu.price}</td>
-                <td>   <Link to={"/edit/" +menu._id}>
-              <button className="btn btn-info">Edit</button>
-            </Link><button type="button" className="btn btn-danger" value={menu._id} onClick={()=>this.deleteMenuById(menu._id)}>Delete</button></td>
+                <td>   <Link to={"/edit/" + menu._id}>
+                  <button className="btn btn-info" id="editButton">Edit</button>
+                </Link><button type="button" id="deleteButton" className="btn btn-danger" value={menu._id} onClick={() => this.deleteMenuById(menu._id)}>Delete</button></td>
               </tr>
             ))}
           </tbody>
@@ -75,9 +74,9 @@ class AdminHome extends Component {
         {this.state.showAccidentForm ? (
           <div className="row">
             <form>
-      
+
               <div className="form-group">
-                
+
                 <input
                   type="text"
                   name="cost"
@@ -108,8 +107,8 @@ class AdminHome extends Component {
             <Link to={"/NewMenuPage"}>
               <button type="button" className="btn btn-success">New Item</button>
             </Link>
-         
-        )}
+
+          )}
       </div>
     );
   }
