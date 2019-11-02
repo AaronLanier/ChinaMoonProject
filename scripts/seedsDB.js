@@ -1388,7 +1388,30 @@ const chinamoonSeed = [
     itemName: "House Special Lo Mein",
     price: 5.85
   },
-  
+  {
+    menuType: "Family Dinner",
+    catagoryName: "famDin",
+    itemName: "For Two Person...Sizzling Rice Soup, Egg Rolls, Mongolian Beef,Sweet & Sour Chicken, Sweet & Sour Chicken",
+    price: 24.55
+  },
+  {
+    menuType: "Family Dinner",
+    catagoryName: "famDin",
+    itemName: "For Three Person...Sizzling Rice Soup, Egg Rolls, Mongolian Beef, Moo Goo Gai Pan",
+    price: 32.95
+  },
+  {
+    menuType: "Family Dinner",
+    catagoryName: "famDin",
+    itemName: "For Four Person...Sizzling Rice Soup, Egg Rolls, Mongolian Beef, Moo Goo Gai Pan, Sweet & Sour Chicken, Shrimp with Lobster Sauce",
+    price: 42.55
+  },
+  {
+    menuType: "Family Dinner",
+    catagoryName: "famDin",
+    itemName: "For Five Person...Sizzling Rice Soup, Egg Rolls, Mongolian Beef, Moo Goo Gai Pan, Sweet & Sour Chicken, Triple Crown, Shrimp with Lobster Sauce",
+    price: 32.95
+  },
   
   { menuType: "All Day Menu", categoryName: "Chicken", itemName: "kabab", price: 2.99 }
 ];
