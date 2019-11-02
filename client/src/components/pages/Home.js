@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import Hours from '../Hours/Hours';
 import Map from '../Map/Map'
 // import "../Home.css";
 

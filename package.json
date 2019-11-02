@@ -7,6 +7,7 @@
     "node": "12.13.0"
   },
   "dependencies": {
+    "bcrypt": "^3.0.6",
     "chalk": "^2.4.2",
     "concurrently": "^5.0.0",
     "dotenv": "^8.2.0",
@@ -14,9 +15,9 @@
     "express": "^4.17.1",
     "find-up": "^3.0.0",
     "get-caller-file": "^1.0.3",
+    "has-flag": "^3.0.0",
     "hosted-git-info": "^2.8.5",
     "invert-kv": "^2.0.0",
-    "has-flag": "^3.0.0",
     "is-arrayish": "^0.2.1",
     "is-fullwidth-code-point": "^2.0.0",
     "is-stream": "^1.1.0",
