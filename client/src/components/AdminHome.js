@@ -1,12 +1,12 @@
 import React from "react";
-import Header from "./Header";
+//import Header from "./Header";
 import AdminWrapper from "./AdminWrapper";
-import Footer from "./Footer";
+//import Footer from "./Footer";
 
 import "./styles.css";
 
 
-function Admin (props) {
+function AdminHome (props) {
 
     return (
         <div className="wrapper" id="wrapper">
@@ -15,7 +15,6 @@ function Admin (props) {
             <AdminWrapper />
 
 
-            <Footer />
         </div>
 
 
@@ -23,5 +22,5 @@ function Admin (props) {
 }
 
 
-export default Admin;
+export default AdminHome;
 

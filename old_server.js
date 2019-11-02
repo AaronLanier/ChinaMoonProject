@@ -111,7 +111,8 @@ function verifyToken(req, res, next) {
 }
 
 //create a protected route
-app.post('/api/posts', verifyToken, (req, res) => {
+//app.post('/api/posts', verifyToken, (req, res) => {
+    app.post('/admin', verifyToken, (req, res) => {
     jwt.verify(req.token, 'secretkey', (err, authData) => {
         if (err) {
             //res.sendStatus(403)
@@ -130,6 +131,9 @@ app.post('/api/posts', verifyToken, (req, res) => {
 
 
 })
+
+
+
 
 app.get("/api/admin/:userid", function (req, res) {
     let UserID = req.params.userid;

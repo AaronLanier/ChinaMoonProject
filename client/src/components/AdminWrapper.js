@@ -1,7 +1,7 @@
 import React from "react";
 //import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Login from "./Login";
-import Registration from "./Registration";
+//import Login from "./Login";
+//import Registration from "./Registration";
 import "./styles.css";
 
 function AdminWrapper(props) {
@@ -13,15 +13,17 @@ function AdminWrapper(props) {
                 &nbsp;
       </div>
             <div className="col" id="orange;">
-
-                <Registration />
-
+<p> Welcome to Admin Page</p>
+<br />
+                <br />
+                <br />
+                <br />
 
 
 
             </div>
             <div className="col" id="lavender;">
-                &nbsp;
+              
       </div>
         </div>
 

@@ -54,7 +54,7 @@ class Login extends Component {
         console.log(response);
         if (response.data.error === false) {
           //this.props.setIsAuthed(true);
-          this.props.history.push("/home");
+          this.props.history.push("/AdminHome");
         } else {
           alert("There was a problem!");
         }

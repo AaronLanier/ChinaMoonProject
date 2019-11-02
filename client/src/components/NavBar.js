@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
+//import React from "react";
 import { Link } from 'react-router-dom';
 //import { BrowserRouter, Route, Link } from "react-router-dom";
 import "./styles.css";
@@ -6,6 +7,11 @@ import "./styles.css";
 
 
 function NavBar(props) {
+
+    useEffect(() => {
+        console.log("Inside useEffect");
+        console.log(props);
+    });
 
     return (
         <div className="header" id="header">
@@ -26,6 +32,8 @@ function NavBar(props) {
                        
                         
 <Link to ="/Login" className="nav-link" id="link"> Login </Link>
+
+
                        
                     </li>
                 </ul>
