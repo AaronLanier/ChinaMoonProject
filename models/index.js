@@ -1,4 +1,5 @@
 module.exports = {
-    ChinaMenu: require("./ChinaMenu")
+    ChinaMenu: require("./ChinaMenu"),
+    AdminUser: require("./AdminUser")
  
   };
