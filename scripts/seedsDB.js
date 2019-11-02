@@ -1082,6 +1082,313 @@ const chinamoonSeed = [
     itemName: "Shrimp Fried Rice",
     price: 4.85
   },
+  {
+    menuType: "Lunch Special",
+    catagoryName: "lunch",
+    itemName: "Vegetables Deluxe",
+    price: 5.65
+  },
+  {
+    menuType: "Lunch Special",
+    catagoryName: "lunch",
+    itemName: "Moo Goo Gai Pan",
+    price: 5.85
+  },
+  {
+    menuType: "Lunch Special",
+    catagoryName: "lunch",
+    itemName: "Chicken with Broccoli",
+    price: 5.85
+  },
+  {
+    menuType: "Lunch Special",
+    catagoryName: "lunch",
+    itemName: "Green Pepper Chicken",
+    price: 5.85
+  },
+  {
+    menuType: "Lunch Special",
+    catagoryName: "lunch",
+    itemName: "Chicken with Mixed Vegetables",
+    price: 5.85
+  },
+  {
+    menuType: "Lunch Special",
+    catagoryName: "lunch",
+    itemName: "Hunan Chicken",
+    price: 5.85
+  },
+  {
+    menuType: "Lunch Special",
+    catagoryName: "lunch",
+    itemName: "Spicy Chicken with Garlic Sauce",
+    price: 5.85
+  },
+  {
+    menuType: "Lunch Special",
+    catagoryName: "lunch",
+    itemName: "Garlic Chicken",
+    price: 5.85
+  },
+  {
+    menuType: "Lunch Special",
+    catagoryName: "lunch",
+    itemName: "Chicken with Cashew Nuts",
+    price: 5.85
+  },
+  {
+    menuType: "Lunch Special",
+    catagoryName: "lunch",
+    itemName: "Kung Pao Chicken",
+    price: 5.85
+  },
+  {
+    menuType: "Lunch Special",
+    catagoryName: "lunch",
+    itemName: "Mongolian Chicken",
+    price: 5.65
+  },
+  {
+    menuType: "Lunch Special",
+    catagoryName: "lunch",
+    itemName: "Sweet & Sour Chicken",
+    price: 5.65
+  },
+  {
+    menuType: "Lunch Special",
+    catagoryName: "lunch",
+    itemName: "Lemon Chicken",
+    price: 5.85
+  },
+  {
+    menuType: "Lunch Special",
+    catagoryName: "lunch",
+    itemName: "Almond Fried Chicken",
+    price: 5.85
+  },
+  {
+    menuType: "Lunch Special",
+    catagoryName: "lunch",
+    itemName: "Hot Braised Chicken",
+    price: 5.85
+  },
+  {
+    menuType: "Lunch Special",
+    catagoryName: "lunch",
+    itemName: "General Tso’s Chicken",
+    price: 5.85
+  },
+  {
+    menuType: "Lunch Special",
+    catagoryName: "lunch",
+    itemName: "Sesame Chicken",
+    price: 5.85
+  },
+  {
+    menuType: "Lunch Special",
+    catagoryName: "lunch",
+    itemName: "Sweet & Sour Pork",
+    price: 5.65
+  },
+  {
+    menuType: "Lunch Special",
+    catagoryName: "lunch",
+    itemName: "Hot Braise Pork",
+    price: 5.65
+  },
+  {
+    menuType: "Lunch Special",
+    catagoryName: "lunch",
+    itemName: "Spicy Pork with Garlic Sauce",
+    price: 5.65
+  },
+  {
+    menuType: "Lunch Special",
+    catagoryName: "lunch",
+    itemName: "Kung Pao Roast Pork",
+    price: 5.65
+  },
+  {
+    menuType: "Lunch Special",
+    catagoryName: "lunch",
+    itemName: "Mongolian Beef",
+    price: 6.15
+  },
+  {
+    menuType: "Lunch Special",
+    catagoryName: "lunch",
+    itemName: "Green Pepper Steak",
+    price: 6.15
+  },
+  {
+    menuType: "Lunch Special",
+    catagoryName: "lunch",
+    itemName: "Beef with Broccoli",
+    price: 6.15
+  },
+  {
+    menuType: "Lunch Special",
+    catagoryName: "lunch",
+    itemName: "Hunan Beef",
+    price: 6.15
+  },
+  {
+    menuType: "Lunch Special",
+    catagoryName: "lunch",
+    itemName: "Beef with Mixed Vegetable",
+    price: 6.15
+  },
+  {
+    menuType: "Lunch Special",
+    catagoryName: "lunch",
+    itemName: "Kung Pao Beef",
+    price: 6.15
+  },
+  {
+    menuType: "Lunch Special",
+    catagoryName: "lunch",
+    itemName: "Almond Fried Shrimp",
+    price: 6.15
+  },
+  {
+    menuType: "Lunch Special",
+    catagoryName: "lunch",
+    itemName: "Sweet & Sour Shrimp",
+    price: 6.15
+  },
+  {
+    menuType: "Lunch Special",
+    catagoryName: "lunch",
+    itemName: "Hot Braised Shrimp",
+    price: 6.15
+  },
+  {
+    menuType: "Lunch Special",
+    catagoryName: "lunch",
+    itemName: "Shrimp with Broccoli",
+    price: 6.15
+  },
+  {
+    menuType: "Lunch Special",
+    catagoryName: "lunch",
+    itemName: "Spicy Shrimp with Garlic Sauce",
+    price: 6.15
+  },
+  {
+    menuType: "Lunch Special",
+    catagoryName: "lunch",
+    itemName: "Shrimp with Mixed Vegetable",
+    price: 6.15
+  },
+  {
+    menuType: "Lunch Special",
+    catagoryName: "lunch",
+    itemName: "Kung Pao Shrimp",
+    price: 6.15
+  },
+  {
+    menuType: "Lunch Special",
+    catagoryName: "lunch",
+    itemName: "Garlic Shrimp",
+    price: 6.15
+  },
+  {
+    menuType: "Lunch Special",
+    catagoryName: "lunch",
+    itemName: "Hunan Shrimp",
+    price: 6.15
+  },
+  {
+    menuType: "Lunch Special",
+    catagoryName: "lunch",
+    itemName: "Shrimp with Lobster Sauce",
+    price: 6.15
+  },
+  {
+    menuType: "Lunch Special",
+    catagoryName: "lunch",
+    itemName: "Phoenix and Dragon",
+    price: 6.15
+  },
+  {
+    menuType: "Lunch Special",
+    catagoryName: "lunch",
+    itemName: "Beef Fried Rice",
+    price: 5.65
+  },
+  {
+    menuType: "Lunch Special",
+    catagoryName: "lunch",
+    itemName: "Chicken Fried Rice",
+    price: 5.65
+  },
+  {
+    menuType: "Lunch Special",
+    catagoryName: "lunch",
+    itemName: "Pork Fried Rice",
+    price: 5.65
+  },
+  {
+    menuType: "Lunch Special",
+    catagoryName: "lunch",
+    itemName: "Vegetable Fried Rice",
+    price: 5.65
+  },
+  {
+    menuType: "Lunch Special",
+    catagoryName: "lunch",
+    itemName: "Shrimp Fried Rice",
+    price: 5.65
+  },
+  {
+    menuType: "Lunch Special",
+    catagoryName: "lunch",
+    itemName: "Beef Lo Mein",
+    price: 5.65
+  },
+  {
+    menuType: "Lunch Special",
+    catagoryName: "lunch",
+    itemName: "Chicken Lo Mein",
+    price: 5.65
+  },
+  {
+    menuType: "Lunch Special",
+    catagoryName: "lunch",
+    itemName: "Pork Lo Mein",
+    price: 5.65
+  },
+  {
+    menuType: "Lunch Special",
+    catagoryName: "lunch",
+    itemName: "Vegetable Lo Mein",
+    price: 5.65
+  },
+  {
+    menuType: "Lunch Special",
+    catagoryName: "lunch",
+    itemName: "Shrimp Lo Mein",
+    price: 5.65
+  },
+  {
+    menuType: "Lunch Special",
+    catagoryName: "lunch",
+    itemName: "House Special Chou Mein",
+    price: 5.85
+  },
+  {
+    menuType: "Lunch Special",
+    catagoryName: "lunch",
+    itemName: "House Special Fried Rice",
+    price: 5.85
+  },
+  {
+    menuType: "Lunch Special",
+    catagoryName: "lunch",
+    itemName: "House Special Lo Mein",
+    price: 5.85
+  },
+  
   
   { menuType: "All Day Menu", categoryName: "Chicken", itemName: "kabab", price: 2.99 }
 ];
