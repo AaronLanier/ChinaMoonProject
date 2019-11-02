@@ -4,3 +4,13 @@
 #deleteButton {
   margin: 5px;
 }
+#adminTable {
+  background-color: rgba(173, 173, 143, 0.589);
+  margin: 30px;
+  /* align-content: center; */
+  padding: 10px;
+  border-style: dotted;
+  border-radius: 25px;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+}

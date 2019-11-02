@@ -1,6 +1,8 @@
 #header {
-  background-color: black;
+  /* background-color: rgb(143, 129, 129); */
   text-align: center;
+  background-color: rgba(172, 172, 141, 0.315);
+  font-family: "Montserrat", sans-serif;
 }
 #logo1 {
   height: 150px;

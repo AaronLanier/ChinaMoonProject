@@ -1,3 +1,28 @@
+body {
+  /* background: url("wallpaper.jpg"); */
+  /* To get image to fit properly to fill background: */
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+body::after {
+  content: "";
+  background-image: url("./assets/background.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.3;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  z-index: -1;
+}
+
 .App {
   text-align: center;
 }
