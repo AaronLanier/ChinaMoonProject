@@ -1,7 +1,7 @@
 import React from "react";
 //import Header from "./Header";
 import HomeWrapper from "./HomeWrapper";
-import Footer from "./Footer";
+//import Footer from "./Footer";
 
 import "./styles.css";
 
@@ -15,7 +15,7 @@ function Home (props) {
             <HomeWrapper />
 
 
-            <Footer />
+            
         </div>
 
 

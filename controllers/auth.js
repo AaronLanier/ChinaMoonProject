@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 const db = require("../models");
 
 router.post("/", function(req, res) {
-  db.User.findOne({ username: req.body.username.toLowerCase() })
+  db.AdminUser.findOne({ username: req.body.username.toLowerCase() })
     .then(foundUser => {
       if (foundUser) {
         console.log(foundUser.checkPassword(req.body.password));

@@ -1,11 +1,11 @@
 import React, { Component } from "react";
-//import axios from "axios";
+import axios from "axios";
 
 class Login extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      userid: "",
+      username: "",
       password: ""
     };
     //console.log(props);
@@ -43,40 +43,68 @@ class Login extends Component {
   //       console.log(err);
   //     });
   // };
+
+
   handleFormSubmit = event => {
+    console.log(this.state);
     event.preventDefault();
-    //console.log(this.state);
-    // axios
-    //   .post("/api/login", this.state)
-    //   .then(response => {
-    //     console.log(response);
-    //     if (response.data.error) {
-    //       alert("Action Failed " + response.data.message);
-    //     } else {
-    //       //if user id and password exit
-    //       //re-direct to admin page
-    //       // this.props.history.push('/collection/' + response.data.data._id);
-    //     }
-    //   })
-    //   .catch(err => {
-    //     console.log(err);
-    //     alert("Failed to create: " + err.message);
-    //   });
+    axios
+      .post("/api/auth", this.state)
+      .then(response => {
+        console.log(response);
+        if (response.data.error === false) {
+          //this.props.setIsAuthed(true);
+          this.props.history.push("/home");
+        } else {
+          alert("There was a problem!");
+        }
+      })
+      .catch(err => {
+        console.log(err);
+        alert("There was a problem!");
+      });
   };
+
+
+
+
+
+
+  // handleFormSubmit = event => {
+  //   event.preventDefault();
+  //   console.log(this.state);
+  //   axios
+  //     .post("/api/login", this.state)
+  //     .then(response => {
+  //       console.log(response);
+  //       if (response.data.error) {
+  //         alert("Action Failed " + response.data.message);
+  //       } else {
+  //         //if user id and password exit
+  //         //re-direct to admin page
+  //         // this.props.history.push('/collection/' + response.data.data._id);
+  //       }
+  //     })
+  //     .catch(err => {
+  //       console.log(err);
+  //       alert("Failed to create: " + err.message);
+  //     });
+  // };
 
   render() {
     return (
+      <div className="row" id="main-row">
       <div className="login">
         <h4 id="lgn">Admin Login</h4>
         <form>
           <div className="form-group">
-            <label htmlFor="userid">UserID:</label>
+            <label htmlFor="username">UserID:</label>
             <input
               type="text"
               placeholder="Enter Email"
               onChange={this.handleChange}
-              id="userid"
-              name="userid"
+              id="username"
+              name="username"
               value={this.state.userid}
             />
           </div>
@@ -108,6 +136,7 @@ class Login extends Component {
         <br />
 
         <br />
+      </div>
       </div>
     );
   }

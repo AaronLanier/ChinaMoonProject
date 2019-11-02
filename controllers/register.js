@@ -3,7 +3,7 @@ const router = express.Router();
 const db = require("../models");
 
 router.post("/", function(req, res) {
-  const user = new db.User({
+  const user = new db.AdminUser({
     name: req.body.name.toLowerCase(),
     username: req.body.username.toLowerCase(),
     password: req.body.password
