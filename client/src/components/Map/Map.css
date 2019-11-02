@@ -1,17 +1,30 @@
 #map {
+  margin-left: 20px;
+  margin-top: 30px;
+}
+#menuContainer {
   margin: 30px;
+  align-content: center;
+  padding: 10px;
+  border-style: dotted;
+  border-radius: 25px;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  overflow-y: scroll;
+  height: 450px;
 }
 #menuContainer::after {
   content: "";
-  background-color: green;
+  /* background-color: rgba(172, 172, 141, 0.315); */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  opacity: 0.3;
+  opacity: 1;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   position: absolute;
   z-index: -1;
+  font-family: "Montserrat", sans-serif;
 }

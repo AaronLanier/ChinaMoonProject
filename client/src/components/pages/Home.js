@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import Hours from '../Hours/Hours';
 import Map from '../Map/Map'
+// import "../Home.css";
 
 class Home extends Component {
     state = {
@@ -38,24 +39,25 @@ class Home extends Component {
 
     render() {
         return (
-            <div>
-                <div>
-                    <select name="menuType" value={this.state.menuType} onChange={this.handleMenuTypeChange}>
-                        <option value="all">---</option>
-                        <option value="All Day Menu">All Day Menu</option>
-                        <option value="Lunch Specials">Lunch Specials</option>
-                        <option value="Family Dinners">Family Dinners</option>
+            <div className="row">
+                <div className="col-sm" id="menuContainer">
+                    <select name="menuType" id="dropdown" value={this.state.menuType} onChange={this.handleMenuTypeChange}>
+                        <option value="all" id="dropdown-content">---</option>
+                        <option value="All Day Menu" id="dropdown-content">All Day Menu</option>
+                        <option value="Lunch Special" id="dropdown-content">Lunch Special</option>
+                        <option value="Family Dinner" id="dropdown-content">Family Dinner</option>
                     </select>
                     {this.state.menus.map((menu) => (
                         <>
 
-                            <p>Catagory Name: {menu.categoryName}</p>
-                            <p>Item Name:{menu.itemName}</p>
-                            <p>Price:{menu.price}</p>
+                            {/* <p>Catagory Name: {menu.categoryName}</p> */}
+                            <p id="itemName">{menu.itemName} - ${menu.price} </p>
+                            {/* <p id="price">Price: {menu.price}</p> */}
+                            {/* ----------------------------------------- */}
                         </>
                     ))}
                 </div>
-                <Map />
+                <div className="col-sm" id="map"><Map /></div>
             </div>
         );
     }

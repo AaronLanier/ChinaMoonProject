@@ -1,9 +1,32 @@
 body {
-  width: 100%;
+  /* background: url("wallpaper.jpg"); */
+  /* To get image to fit properly to fill background: */
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  font-weight: bold;
+}
+
+body::after {
+  content: "";
+  background-image: url("../assets/background.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.3;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  z-index: -1;
 }
 
 .wrapper {
-  background-color: red;
+  /* background-color: red; */
   width: 100%;
 }
 
@@ -32,20 +55,44 @@ body {
    
 } */
 #main {
-  background-color: green;
+  /* background-color: green; */
 }
 
 /* .footer{
     background-color: blue;
 } */
 .login {
-  background-color: brown;
+  /* background-color: brown; */
   width: 100%;
   margin: 20px;
 }
+#lgn {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+}
 form {
-  padding: 20px;
-  color: white;
+  background-color: rgba(173, 173, 143, 0.589);
+  margin: 30px;
+  align-content: center;
+  padding: 10px;
+  border-style: dotted;
+  border-radius: 25px;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+}
+form::after {
+  /* background-color: rgba(172, 172, 141, 0.315); */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  z-index: -1;
+  font-family: "Montserrat", sans-serif;
 }
 #lgn {
   text-align: center;

@@ -5,7 +5,8 @@ import AdminHome from "./components/pages/AdminHome";
 import NewMenuPage from "./components/pages/NewMenuPage";
 import Edit from "./components/pages/Edit";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import NavBar from "../src/components/NavBar/NavBar"
+import NavBar from "../src/components/NavBar/NavBar";
+import "./App.css";
 
 function App() {
   return (
