@@ -3,6 +3,7 @@ const router = express.Router();
 const mongoose = require("mongoose");
 const db = require("../models");
 router.post("/", function(req, res) {
+  console.log("About to login!!!")
   db.AdminUser.findOne({ username: req.body.username.toLowerCase() })
     .then(foundUser => {
       if (foundUser) {

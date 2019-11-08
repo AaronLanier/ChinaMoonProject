@@ -6,11 +6,25 @@
 }
 #adminTable {
   background-color: rgba(173, 173, 143, 0.589);
-  margin: 30px;
+  margin-top: 40px;
   /* align-content: center; */
   padding: 10px;
   border-style: dotted;
   border-radius: 25px;
   text-align: center;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", sans-serif; 
+  /* height: 1000vh; */
 }
+td{
+  width: 30vw;
+}
+body {
+  /* background: url("wallpaper.jpg"); */
+  /* To get image to fit properly to fill background: */
+  height: 100vh;
+  background-color: #fbeac3;
+}
+#newButton{
+  margin: 20px;
+}
+

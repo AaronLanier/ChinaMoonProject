@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
 import "./Map.css";
 
-const AnyReactComponent = ({ text }) => <div>{text}</div>;
+const AnyReactComponent = ({ text }) => <div className="marker">{text}</div>;
 
 class Map extends Component {
   static defaultProps = {
@@ -25,7 +25,8 @@ class Map extends Component {
           <AnyReactComponent
             lat={33.967670}
             lng={-84.667320}
-            text="ChinaMoon Restaurant"
+            text="3960 Mary Eliza Trace NW"
+            color="blue"
 
           />
         </GoogleMapReact>
