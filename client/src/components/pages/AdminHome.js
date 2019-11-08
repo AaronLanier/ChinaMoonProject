@@ -47,31 +47,7 @@ class AdminHome extends Component {
   render() {
     return (
       <div className="container" id="adminTable">
-        <table class="table">
-          <thead>
-            <tr>
-              <th scope="col">Menu Type</th>
-              <th scope="col">Catagory Name</th>
-              <th scope="col">Item Name</th>
-              <th scope="col">Price</th>
-              <th scope="col"> </th>
-            </tr>
-          </thead>
-          <tbody>
-            {this.state.menus.map(menu => (
-              <tr>
-                <td>{menu.menuType}</td>
-                <td>{menu.categoryName}</td>
-                <td>{menu.itemName}</td>
-                <td>{menu.price}</td>
-                <td>   <Link to={"/edit/" + menu._id}>
-                  <button className="btn btn-info" id="editButton">Edit</button>
-                </Link><button type="button" id="deleteButton" className="btn btn-danger" value={menu._id} onClick={() => this.deleteMenuById(menu._id)}>Delete</button></td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-        {this.state.showAccidentForm ? (
+      {this.state.showAccidentForm ? (
           <div className="row">
             <form>
 
@@ -105,10 +81,35 @@ class AdminHome extends Component {
           </div>
         ) : (
             <Link to={"/NewMenuPage"}>
-              <button type="button" className="btn btn-success">New Item</button>
+              <button type="button" className="btn btn-success" id="newButton">New Item</button>
             </Link>
 
           )}
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Menu Type</th>
+              <th scope="col">Category Name</th>
+              <th scope="col">Item Name</th>
+              <th scope="col">Price</th>
+              <th scope="col"> </th>
+            </tr>
+          </thead>
+          <tbody>
+            {this.state.menus.map(menu => (
+              <tr>
+                <td>{menu.menuType}</td>
+                <td>{menu.categoryName}</td>
+                <td>{menu.itemName}</td>
+                <td>{menu.price}</td>
+                <td>   <Link to={"/edit/" + menu._id}>
+                  <button className="btn btn-info" id="editButton">Edit</button>
+                </Link><button type="button" id="deleteButton" className="btn btn-danger" value={menu._id} onClick={() => this.deleteMenuById(menu._id)}>Delete</button></td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+        
       </div>
     );
   }

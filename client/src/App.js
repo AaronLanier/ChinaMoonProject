@@ -5,6 +5,7 @@ import AdminHome from "./components/pages/AdminHome";
 import NewMenuPage from "./components/pages/NewMenuPage";
 import Registration from "./components/pages/Register";
 import Edit from "./components/pages/Edit";
+import NoMatch from "./components/pages/NoMatch";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import NavBar from "../src/components/NavBar/NavBar";
 import "./App.css";
@@ -15,12 +16,14 @@ function App() {
       <Router>
         <NavBar />
         <Switch>
-          <Route path="/AdminLogin" component={AdminLogin} />
-          <Route path="/AdminHome" component={AdminHome} />
-          <Route path="/edit/:id" component={Edit} />
-          <Route path="/NewMenuPage" component={NewMenuPage} />
-          <Route path="/Registration" exact component={Registration} />
-          <Route path="/" component={Home} />
+          <Route exact path="/AdminLogin" component={AdminLogin} />
+          <Route exact path="/AdminHome" component={AdminHome} />
+          <Route exact path="/edit/:id" component={Edit} />
+          <Route exact path="/NewMenuPage" component={NewMenuPage} />
+          <Route exact path="/Registration" exact component={Registration} />
+          <Route exact path="/" component={Home} />
+          <Route exact path="*" component={NoMatch} />
+
         </Switch>
       </Router>
     </>

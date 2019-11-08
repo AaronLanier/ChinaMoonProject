@@ -56,9 +56,15 @@ class NewMenuPage extends Component {
               value={this.state.menuType}
               onChange={this.handleMenuTypeChange}
             >
-              <option value="All Day Menu">All Day Menu</option>
-              <option value="Lunch Specials">Lunch Specials</option>
-              <option value="Family Dinners">Family Dinners</option>
+               <option value="All Day Menu" id="dropdown-content">
+              All Day Menu
+            </option>
+            <option value="Lunch Special" id="dropdown-content">
+              Lunch Special
+            </option>
+            <option value="Family Dinner" id="dropdown-content">
+              Family Dinner
+            </option>
             </select>
           </div>
         </div>
@@ -70,20 +76,22 @@ class NewMenuPage extends Component {
               value={this.state.categoryName}
               onChange={this.handleCategoryNameChange}
             >
-              <option value="Appetizers">Appetizers</option>
-              <option value="Chicken">Chicken</option>
-              <option value="Beef">Beef</option>
-              <option value="Sea Food">Sea Food</option>
-              <option value="Pork">Pork</option>
-              <option value="Vegetables">Vegetables</option>
-              <option value="Lo Mein">Lo Mein</option>
-              <option value="House Special">House Special</option>
-              <option value="Chow Mein">Chow Mein</option>
-              <option value="Egg FU Yung and Fried Rice">
-                Egg FU Yung and Fried Rice
-              </option>
-              <option value="Combination Dinner">Combination Dinner</option>
-              <option value="Kid's Menu">Kid's Menu</option>
+              <option value="appetizers">Appetizers</option>
+              <option value="chicken">Chicken</option>
+              <option value="beef">Beef</option>
+            <option value="seafood">Sea Food</option>
+            <option value="pork">Pork</option>
+            <option value="vegetables">Vegetables</option>
+            <option value="loMein">Lo Mein</option>
+            <option value="houseSpecial">House Special</option>
+            <option value="chowMein">Chow Mein</option>
+            <option value="eggFuYungandFriedRice">
+              Egg FU Yung and Fried Rice
+            </option>
+            <option value="comboDinner">Combination Dinner</option>
+            <option value="kidMenu">Kid's Menu</option>
+              <option value="lunch">Lunch</option>
+              <option value="famDin">Family Dinner</option>
             </select>
           </div>
         </div>

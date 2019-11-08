@@ -7,6 +7,7 @@ router.post("/", function(req, res) {
     username: req.body.username.toLowerCase(),
     password: req.body.password
   });
+  console.log("About to save new user!!")
   user.save((err, newUser) => {
     if (err) {
       return res.status(500).json({

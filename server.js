@@ -9,6 +9,8 @@ const AuthController = require("./controllers/auth");
 
 
 
+
+
 const PORT = process.env.PORT || 3001;
 
 const db = require("./models");
@@ -17,6 +19,10 @@ const app = express();
 
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
+
+
+
+
 app.use("/api/register", RegisterController);
 app.use("/api/auth", AuthController);
 
@@ -52,6 +58,26 @@ app.get("/menus", function(req, res) {
 
 app.get("/menus/:menuType", function(req, res) {
     db.ChinaMenu.find({menuType:req.params.menuType})
+    .then((allMenu) => {
+        // console.log("Found this from db",allMenu)
+        res.json({
+            message: "Requested all menus",
+            error: false,
+            data: allMenu
+        });
+    }).catch((err) => {
+        console.log(err);
+        res.json({
+            message: err.message,
+            error: true
+        })
+    })
+});
+
+
+app.get("/menusCategoryName/:menuType/:categoryName", function(req, res) {
+    console.log("About to find category",req.params)
+    db.ChinaMenu.find({categoryName:req.params.categoryName, menuType:req.params.menuType})
     .then((allMenu) => {
         console.log("Found this from db",allMenu)
         res.json({
