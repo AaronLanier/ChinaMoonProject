@@ -57,6 +57,7 @@ app.get("/menus", function(req, res) {
 });
 
 app.get("/menus/:menuType", function(req, res) {
+    console.log('menu type?')
     db.ChinaMenu.find({menuType:req.params.menuType})
     .then((allMenu) => {
         // console.log("Found this from db",allMenu)
@@ -133,7 +134,9 @@ app.delete("menu/delete/:id", function(req, res) {
 })
 
 //item based on id
-app.get("/menus/:id", function(req, res) {
+app.get("/onemenus/:id", function(req, res) {
+    console.log('here');
+    console.log(db.ChinaMenu.findById(req.params.id))
     db.ChinaMenu.findById(req.params.id)
     .then((singleMenu) => {
         res.json({

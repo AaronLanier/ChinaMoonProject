@@ -3,7 +3,7 @@ import axios from "axios";
 
 class Edit extends Component {
   state = {
-    catagoryName: "",
+    categoryName: "",
     itemName: "",
     price: "",
     _id:""
@@ -16,11 +16,11 @@ class Edit extends Component {
 
   getMenuById = () => {
     axios
-      .get("/menus/" + this.props.match.params.id)
+      .get("/onemenus/" + this.props.match.params.id)
       .then(menu => {
         console.log(menu);
         this.setState({
-          catagoryName: menu.data.data.catagoryName,
+          categoryName: menu.data.data.categoryName,
           itemName: menu.data.data.itemName,
           price: menu.data.data.price,
           _id: menu.data.data._id
@@ -67,13 +67,13 @@ class Edit extends Component {
           <div className="col-sm-6">
             <form>
               <div className="form-group">
-                <label htmlFor="model">Catagory Name</label>
+                <label htmlFor="model">Category Name</label>
                 <input
                   className="form-control"
                   type="text"
-                  name="catagoryName"
-                  placeholder="catagoryName"
-                  value={this.state.catagoryName}
+                  name="categoryName"
+                  placeholder="categoryName"
+                  value={this.state.categoryName}
                   onChange={this.handleInputChange}
                 />
               </div>
