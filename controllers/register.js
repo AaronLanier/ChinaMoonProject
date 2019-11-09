@@ -1,6 +1,8 @@
 const express = require("express");
 const router = express.Router();
 const db = require("../models");
+const jwt = require('jsonwebtoken');
+
 router.post("/", function(req, res) {
   const user = new db.AdminUser({
     name: req.body.name.toLowerCase(),
@@ -16,10 +18,18 @@ router.post("/", function(req, res) {
         data: err
       });
     } else {
+      const privateKey = "superSecretKey";
+      const token = jwt.sign(
+        {
+          _id: newUser._id,
+          username:newUser.username
+        },
+       "supersecretkey"
+        );
       return res.json({
         message: "Successfully created new user.",
         error: false,
-        data: newUser
+        data: token
       });
     }
   });

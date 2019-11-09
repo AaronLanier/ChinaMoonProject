@@ -1,5 +1,5 @@
 var mongoose = require("mongoose");
-//const bcrypt = require("bcryptjs");
+
 const bcrypt = require('bcrypt');
 // Save a reference to the Schema constructor
 var Schema = mongoose.Schema;

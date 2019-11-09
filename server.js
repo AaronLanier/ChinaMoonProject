@@ -71,14 +71,14 @@ app.get("/menusCategoryName/:menuType/:categoryName", function(req, res) {
     console.log("About to find category",req.params)
     db.ChinaMenu.find({categoryName:req.params.categoryName, menuType:req.params.menuType})
     .then((allMenu) => {
-        console.log("Found this from db",allMenu)
+        //console.log("Found this from db",allMenu)
         res.json({
             message: "Requested all menus",
             error: false,
             data: allMenu
         });
     }).catch((err) => {
-        console.log(err);
+        //console.log(err);
         res.json({
             message: err.message,
             error: true
@@ -88,7 +88,7 @@ app.get("/menusCategoryName/:menuType/:categoryName", function(req, res) {
 
 //To create a new item
 app.post("/new",function(req,res){
-    console.log("New Item ",req.body)
+    //console.log("New Item ",req.body)
     db.ChinaMenu.create(req.body)
     .then((newChinaMenu) => {
 console.log("New Menu Added to the system: ",newChinaMenu);
@@ -126,8 +126,8 @@ app.delete("menu/delete/:id", function(req, res) {
 
 //item based on id
 app.get("/onemenus/:id", function(req, res) {
-    console.log('here');
-    console.log(db.ChinaMenu.findById(req.params.id))
+    //console.log('here');
+    //console.log(db.ChinaMenu.findById(req.params.id))
     db.ChinaMenu.findById(req.params.id)
     .then((singleMenu) => {
         res.json({
