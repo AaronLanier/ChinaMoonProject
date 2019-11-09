@@ -1,25 +1,4 @@
-// import React, { Component } from 'react';
-// import "../styles.css";
 
-// import Wrapper from "../Wrapper";
-
-
-// class AdminLogin extends Component {
-
-//     render() {
-//         return (
-//             <div className="wrapper" id="wrapper">
-
-
-
-//                 <Wrapper />
-
-
-
-//             </div>
-//         );
-//     }
-// }
 
 // export default AdminLogin;
 import React, { Component } from "react";
@@ -42,27 +21,8 @@ class Login extends Component {
    });
    //console.log(this.state);
  };
- // componentDidMount() {
- //   this.getUserByUserID();
- // }
- // getUserByUserID = () => {
- //   axios
- //     .get("/api/login/" + this.props.match.params.id)
- //     .then(user => {
- //       console.log(user);
- //       // this.setState({
- //       //   userid: car.data.data.model,
- //       //   color: car.data.data.color,
- //       //   year: car.data.data.year,
- //       //   imageURL: car.data.data.imageURL,
- //       //   _id: car.data.data._id,
- //       //   accident: car.data.data.accident
- //       // });
- //     })
- //     .catch(err => {
- //       console.log(err);
- //     });
- // };
+
+ 
  handleFormSubmit = event => {
    console.log(this.state);
    event.preventDefault();
@@ -82,26 +42,7 @@ class Login extends Component {
        alert("There was a problem!");
      });
  };
- // handleFormSubmit = event => {
- //   event.preventDefault();
- //   console.log(this.state);
- //   axios
- //     .post("/api/login", this.state)
- //     .then(response => {
- //       console.log(response);
- //       if (response.data.error) {
- //         alert("Action Failed " + response.data.message);
- //       } else {
- //         //if user id and password exit
- //         //re-direct to admin page
- //         // this.props.history.push('/collection/' + response.data.data._id);
- //       }
- //     })
- //     .catch(err => {
- //       console.log(err);
- //       alert("Failed to create: " + err.message);
- //     });
- // };
+
  render() {
    return (
      <div className="row" id="main-row">

@@ -46,12 +46,19 @@ class AdminHome extends Component {
 
   render() {
     return (
+      <>
+      <Link to={"/AdminLogin"}>
+              <button type="button" className="btn btn-warning" id="newButton" >Log Out</button>
+            </Link>
       <div className="container" id="adminTable">
+          <Link to={"/NewMenuPage"}>
+              <button type="button" className="btn btn-success" id="newButton">New Item</button>
+            </Link>
         <table class="table">
           <thead>
             <tr>
               <th scope="col">Menu Type</th>
-              <th scope="col">Catagory Name</th>
+              <th scope="col">Category Name</th>
               <th scope="col">Item Name</th>
               <th scope="col">Price</th>
               <th scope="col"> </th>
@@ -71,45 +78,9 @@ class AdminHome extends Component {
             ))}
           </tbody>
         </table>
-        {this.state.showAccidentForm ? (
-          <div className="row">
-            <form>
-
-              <div className="form-group">
-
-                <input
-                  type="text"
-                  name="cost"
-                  value={this.state.cost}
-                  onChange={this.handleCostChange}
-                />
-              </div>
-              <div className="form-group">
-                <button
-                  className="btn btn-success"
-                  onClick={this.handleAccidentFormSubmit}
-                >
-                  Submit Your New Item
-                </button>
-                <button
-                  type="button"
-                  className="btn btn-light"
-                  onClick={() => {
-                    this.setState({ showNewItemForm: false });
-                  }}
-                >
-                  Cancel
-                </button>
-              </div>
-            </form>
-          </div>
-        ) : (
-            <Link to={"/NewMenuPage"}>
-              <button type="button" className="btn btn-success">New Item</button>
-            </Link>
-
-          )}
+        
       </div>
+      </>
     );
   }
 }

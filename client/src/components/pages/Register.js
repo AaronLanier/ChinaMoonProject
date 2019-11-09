@@ -1,7 +1,11 @@
 import React, { Component } from "react";
 import axios from "axios";
 //import { Redirect } from 'react-router-dom';
+
+
 class Registration extends Component {
+
+  
   constructor(props) {
     super(props);
     this.state = {
@@ -26,11 +30,12 @@ class Registration extends Component {
       .post("/api/register", this.state)
       .then(response => {
         //console.log("On the registration page");
-        //console.log(response);
+        console.log("User signed in ",response);
+
         if (response.data.error) {
           alert("Failed to create" + response.data.message);
         } else {
-          this.props.history.push("/Login");
+           this.props.history.push("/AdminLogin");
         }
       })
       .catch(err => {
@@ -40,8 +45,8 @@ class Registration extends Component {
   };
   render() {
     return (
-      <div className="row" id="main-row">
-        <div className="reg-form">
+      <div className="row" id="main-row" style={{"justify-content": "center"}}>
+        <div className="reg-form" >
           <h4 id="lgn">Admin Registration </h4>
           <form>
             <div className="form-group">

@@ -2,21 +2,17 @@ require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
 const path = require("path");
+const PORT = process.env.PORT || 3001;
+const db = require("./models");
+const app = express();
 const RegisterController = require("./controllers/register");
 const AuthController = require("./controllers/auth");
 
-
-
-
-
-const PORT = process.env.PORT || 3001;
-
-const db = require("./models");
-
-const app = express();
-
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
+
+
+
 app.use("/api/register", RegisterController);
 app.use("/api/auth", AuthController);
 
@@ -50,8 +46,30 @@ app.get("/menus", function(req, res) {
     })
 });
 
+//Separate menu type
 app.get("/menus/:menuType", function(req, res) {
+    console.log('menu type?')
     db.ChinaMenu.find({menuType:req.params.menuType})
+    .then((allMenu) => {
+        // console.log("Found this from db",allMenu)
+        res.json({
+            message: "Requested all menus",
+            error: false,
+            data: allMenu
+        });
+    }).catch((err) => {
+        console.log(err);
+        res.json({
+            message: err.message,
+            error: true
+        })
+    })
+});
+
+//Filter which is the home page
+app.get("/menusCategoryName/:menuType/:categoryName", function(req, res) {
+    console.log("About to find category",req.params)
+    db.ChinaMenu.find({categoryName:req.params.categoryName, menuType:req.params.menuType})
     .then((allMenu) => {
         console.log("Found this from db",allMenu)
         res.json({
@@ -107,7 +125,9 @@ app.delete("menu/delete/:id", function(req, res) {
 })
 
 //item based on id
-app.get("/menus/:id", function(req, res) {
+app.get("/onemenus/:id", function(req, res) {
+    console.log('here');
+    console.log(db.ChinaMenu.findById(req.params.id))
     db.ChinaMenu.findById(req.params.id)
     .then((singleMenu) => {
         res.json({
@@ -124,7 +144,7 @@ app.get("/menus/:id", function(req, res) {
     })
 });
 
-//
+//Edit route
 app.put("/menu/:id", function(req, res) {
     db.ChinaMenu.findByIdAndUpdate(req.body._id, req.body)
     .then(singleMenu => {
@@ -142,6 +162,7 @@ app.put("/menu/:id", function(req, res) {
     });
 });
 
+//Delete a route
 app.delete("/menus/:id", function(req, res) {
     db.ChinaMenu.deleteOne({_id: req.params.id})
     .then((response) => {
