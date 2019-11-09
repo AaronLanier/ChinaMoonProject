@@ -35,7 +35,7 @@ class Registration extends Component {
         if (response.data.error) {
           alert("Failed to create" + response.data.message);
         } else {
-          // this.props.history.push("/Login");
+           this.props.history.push("/AdminLogin");
         }
       })
       .catch(err => {

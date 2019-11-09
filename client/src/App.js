@@ -23,7 +23,6 @@ function App() {
           <Route exact path="/Registration" exact component={Registration} />
           <Route exact path="/" component={Home} />
           <Route exact path="*" component={NoMatch} />
-
         </Switch>
       </Router>
     </>
