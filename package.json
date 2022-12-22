@@ -22,7 +22,7 @@
     "is-stream": "^1.1.0",
     "isexe": "^2.0.0",
     "json-parse-better-errors": "^1.0.2",
-    "jsonwebtoken": "^7.4.2",
+    "jsonwebtoken": "^9.0.0",
     "lcid": "^2.0.0",
     "lodash": "^4.17.15",
     "map-age-cleaner": "^0.1.3",
